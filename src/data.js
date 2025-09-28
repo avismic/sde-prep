@@ -242,64 +242,6 @@ export const initialData = {
       difficulty: "Medium",
     },
   ],
-  "HR & Behavioral Questions": [
-    {
-      text: "Tell me about yourself. / Walk me through your resume.",
-      difficulty: "Personal/Fit",
-    },
-    {
-      text: "What are your greatest strengths and weaknesses?",
-      difficulty: "Personal/Fit",
-    },
-    {
-      text: "Why do you want to join LTI Mindtree? / What value do you bring to the company?",
-      difficulty: "Company/Motivation",
-    },
-    {
-      text: "What do you know about LTI Mindtree (mission, vision, competitors)?",
-      difficulty: "Company/Research",
-    },
-    {
-      text: "Are you willing to relocate to another city or work in different shifts?",
-      difficulty: "Adaptability/Logistics",
-    },
-    {
-      text: "What are your long-term career goals, and how does this role fit into them?",
-      difficulty: "Career/Fit",
-    },
-    {
-      text: "Describe a challenge you faced in a project and how you dealt with it.",
-      difficulty: "Situational/STAR",
-    },
-    {
-      text: "Tell me about a time you had a disagreement with a team member. How did you resolve it?",
-      difficulty: "Situational/STAR",
-    },
-    {
-      text: "Describe a situation where you had too many tasks and how you prioritized them.",
-      difficulty: "Situational/STAR",
-    },
-    {
-      text: "What did you learn from your previous projects/internships?",
-      difficulty: "Experience/Learning",
-    },
-    {
-      text: "How do you handle pressure or tight deadlines?",
-      difficulty: "Adaptability/Stress",
-    },
-    {
-      text: "What is your salary expectation?",
-      difficulty: "Logistics/Negotiation",
-    },
-    {
-      text: "What will you do if you don't get hired this time?",
-      difficulty: "Personal/Attitude",
-    },
-    {
-      text: "Do you have any questions for us?",
-      difficulty: "Personal/Engagement",
-    },
-  ],
   "Operating System & Networks": [
     {
       text: "What is an Operating System? Explain its main functions.",
@@ -372,5 +314,63 @@ export const initialData = {
     { text: "What are public and private IP addresses?", difficulty: "Easy" },
     { text: "What is a subnet mask?", difficulty: "Medium" },
     { text: "Explain what a firewall does.", difficulty: "Easy" },
+  ],
+  "HR & Behavioral Questions": [
+    {
+      text: "Tell me about yourself. / Walk me through your resume.",
+      difficulty: "Personal/Fit",
+    },
+    {
+      text: "What are your greatest strengths and weaknesses?",
+      difficulty: "Personal/Fit",
+    },
+    {
+      text: "Why do you want to join LTI Mindtree? / What value do you bring to the company?",
+      difficulty: "Company/Motivation",
+    },
+    {
+      text: "What do you know about LTI Mindtree (mission, vision, competitors)?",
+      difficulty: "Company/Research",
+    },
+    {
+      text: "Are you willing to relocate to another city or work in different shifts?",
+      difficulty: "Adaptability/Logistics",
+    },
+    {
+      text: "What are your long-term career goals, and how does this role fit into them?",
+      difficulty: "Career/Fit",
+    },
+    {
+      text: "Describe a challenge you faced in a project and how you dealt with it.",
+      difficulty: "Situational/STAR",
+    },
+    {
+      text: "Tell me about a time you had a disagreement with a team member. How did you resolve it?",
+      difficulty: "Situational/STAR",
+    },
+    {
+      text: "Describe a situation where you had too many tasks and how you prioritized them.",
+      difficulty: "Situational/STAR",
+    },
+    {
+      text: "What did you learn from your previous projects/internships?",
+      difficulty: "Experience/Learning",
+    },
+    {
+      text: "How do you handle pressure or tight deadlines?",
+      difficulty: "Adaptability/Stress",
+    },
+    {
+      text: "What is your salary expectation?",
+      difficulty: "Logistics/Negotiation",
+    },
+    {
+      text: "What will you do if you don't get hired this time?",
+      difficulty: "Personal/Attitude",
+    },
+    {
+      text: "Do you have any questions for us?",
+      difficulty: "Personal/Engagement",
+    },
   ],
 };

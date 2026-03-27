@@ -79,7 +79,7 @@ function App() {
 
     return (
         <div className="app-container">
-            <h1>SDE Prep Checklist 🧑‍💻</h1>
+            <h1>SDE Prep Checklist All in One 🧑‍💻</h1>
             <ProgressBar value={calculateOverallProgress()} />
 
             <div className="filter-controls">

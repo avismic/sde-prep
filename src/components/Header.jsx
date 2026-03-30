@@ -6,7 +6,7 @@ function Header({ logout, progress }) {
   return (
     <div className={styles.header}>
       <div className={styles.headerRow}>
-        <h1>SDE Prep Checklist - Abhishek Anand🧑‍💻</h1>
+        <h1>SDE Prep Checklist - Abhishek🧑‍💻</h1>
 
         <button className={styles.logout_button} onClick={logout}>
           Logout

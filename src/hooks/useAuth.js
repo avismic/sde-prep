@@ -12,7 +12,7 @@ export function useAuth() {
     try {
       const endpoint = authMode === "login" ? "login" : "signup";
 
-      const res = await fetch(`http://localhost:5000/${endpoint}`, {
+      const res = await fetch(`http://43.204.254.111:5000/${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

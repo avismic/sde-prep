@@ -16,7 +16,7 @@ export function useProgress(isLoggedIn) {
 
     setTopics(formattedData);
 
-    fetch(`http://localhost:5000/get-progress`, {
+    fetch(`http://43.204.254.111:5000/get-progress`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -67,7 +67,7 @@ export function useProgress(isLoggedIn) {
     setTopics(newTopics);
     const toggledQuestion = filteredTopics[topicTitle][questionIndex];
 
-    fetch("http://localhost:5000/save-progress", {
+    fetch("http://43.204.254.111:5000/save-progress", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

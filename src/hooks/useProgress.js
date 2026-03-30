@@ -16,7 +16,7 @@ export function useProgress(isLoggedIn) {
 
     setTopics(formattedData);
 
-    fetch(`http://elevenmen.in/api/get-progress`, {
+    fetch(`https://elevenmen.in/api/get-progress`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -67,7 +67,7 @@ export function useProgress(isLoggedIn) {
     setTopics(newTopics);
     const toggledQuestion = filteredTopics[topicTitle][questionIndex];
 
-    fetch("http://elevenmen.in/api/save-progress", {
+    fetch("https://elevenmen.in/api/save-progress", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -23,9 +23,16 @@ export function useAuth() {
       const data = await res.json();
 
       if (res.ok) {
-        localStorage.setItem("token", data.token);
-        localStorage.setItem("userEmail", authData.email);
-        setIsLoggedIn(true);
+        if (authMode === "login") {
+          // ✅ Only login stores token
+          localStorage.setItem("token", data.token);
+          localStorage.setItem("userEmail", authData.email);
+          setIsLoggedIn(true);
+        } else {
+          // ✅ Signup flow
+          alert("Account created successfully! Please login.");
+          navigate("/login");
+        }
       } else {
         setError(data.message);
       }

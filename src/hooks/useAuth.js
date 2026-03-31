@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function useAuth() {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+    const navigate = useNavigate();
 
   const loginOrSignup = async (authMode, authData) => {
     setError("");

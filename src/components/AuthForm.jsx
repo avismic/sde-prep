@@ -9,6 +9,7 @@ function AuthForm({
   handleAuth,
   loading,
   error,
+  success,
 }) {
   return (
     <div className={styles.container}>
@@ -26,7 +27,7 @@ function AuthForm({
         )}
 
         <input
-        className={styles.input}
+          className={styles.input}
           type="email"
           placeholder="Email"
           value={authData.email}
@@ -34,7 +35,7 @@ function AuthForm({
         />
 
         <input
-        className={styles.input}
+          className={styles.input}
           type="password"
           placeholder="Password"
           value={authData.password}
@@ -43,13 +44,20 @@ function AuthForm({
           }
         />
 
-        <button className={styles.button} onClick={handleAuth} disabled={loading}>
+        <button
+          className={styles.button}
+          onClick={handleAuth}
+          disabled={loading}
+        >
           {loading
             ? "Please wait..."
             : authMode === "login"
               ? "Login"
               : "Sign Up"}
         </button>
+        {success && (
+          <p style={{ color: "green", marginTop: "10px" }}>{success}</p>
+        )}
         {error && <p className={styles.error}>{error}</p>}
 
         <p

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Topic from "./components/Topic";
 import ProgressBar from "./components/ProgressBar";
 import AuthForm from "./components/AuthForm";
@@ -10,7 +10,8 @@ import Header from "./components/Header";
 function App() {
   const [difficultyFilter, setDifficultyFilter] = useState("all");
   const [statusFilter, setStatusFilter] = useState("all");
-  const { isLoggedIn, loading, error, loginOrSignup, logout } = useAuth();
+  const { isLoggedIn, loading, error, success, loginOrSignup, logout } =
+    useAuth();
   const { topics, setTopics, toggleQuestion } = useProgress(isLoggedIn);
 
   const [authMode, setAuthMode] = useState("login"); // 'login' or 'signup'
@@ -19,6 +20,12 @@ function App() {
     email: "",
     password: "",
   });
+
+  useEffect(() => {
+    if (success && authMode === "signup") {
+      setAuthMode("login");
+    }
+  }, [success]);
 
   const handleAuth = () => {
     loginOrSignup(authMode, authData);
@@ -81,6 +88,7 @@ function App() {
           handleAuth={handleAuth}
           loading={loading}
           error={error}
+          success={success}
         />
       )}
 

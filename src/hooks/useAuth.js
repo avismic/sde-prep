@@ -62,5 +62,6 @@ export function useAuth() {
     error,
     loginOrSignup,
     logout,
+    success,
   };
 }

@@ -5,7 +5,7 @@ export function useAuth() {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const loginOrSignup = async (authMode, authData) => {
     setError("");
@@ -22,7 +22,13 @@ export function useAuth() {
         body: JSON.stringify(authData),
       });
 
-      const data = await res.json();
+      // ✅ SAFE JSON PARSE
+      let data = {};
+      try {
+        data = await res.json();
+      } catch (e) {
+        data = {};
+      }
 
       if (res.ok) {
         if (authMode === "login") {
@@ -32,11 +38,12 @@ export function useAuth() {
           setIsLoggedIn(true);
         } else {
           // ✅ Signup flow
-          alert("Account created successfully! Please login.");
-          navigate("/login");
+          navigate("/login", {
+            state: { message: "Account created successfully" },
+          });
         }
       } else {
-        setError(data.message);
+        setError(data.message || "Authentication failed");
       }
     } catch (err) {
       setError("Something went wrong");
